@@ -1,0 +1,40 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+
+    <script type="text/babel">
+      function SayHello(props){
+        return (
+          <p>Hello {props.name}</p>
+        )
+      }
+
+      function Title(props){
+        return (
+          <h1>Example Multiple components</h1>
+        )
+      }
+
+      function Main(props){
+        return (
+          <div>
+            <Title />
+            <SayHello name="Team!"/>
+          </div>
+        )
+      }
+
+      ReactDOM.render(
+          <Main/>,
+          document.getElementById('content')
+      );
+    </script>
+  </head>
+
+  <body>
+  	<div id="content"></div>
+  </body>
+</html>
